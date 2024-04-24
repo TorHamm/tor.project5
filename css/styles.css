@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 10px;
+    width: 343px;
+    background-color: white;
+}
+
+.image {
+    background-image: url('/images/image-product-mobile.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 240px;
+    border-radius: 10px 10px 0 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    padding: 24px;
+}
+
+h1 {
+    font-family: 'Fraunces';
+    line-height: 1;
+}
+
+h3 , p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+
+.product_type {
+    font-size: .75rem;
+    letter-spacing: 5px;
+}
+
+.product_name {
+    margin-bottom: 4px;
+    font-size: 2rem;
+    color: hsl(212, 21%, 14%);
+}
+
+.product_description {
+    margin-bottom: 12px;
+    font-size: .875rem;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    
+}
+
+.price .discounted {
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+}
+
+.price .original_price {
+    margin-left: 19px;
+    font-size: .813rem;
+    text-decoration: line-through;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 8px;
+    background-color: hsl(158, 36%, 37%);
+}
+
+button:hover {
+    cursor: pointer;
+    transition: .2s;
+    background-color: #1A4032;
+}
+
+button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: .875rem;
+    color: white;
+    padding: 12px 0;
+}
+
+button div img {
+    height: 16px;
+    margin-right: 12px;
+}
+
+@media only screen and (min-width:768px){
+    .card {
+        display: flex;
+        width: 600px;
+        height: 450px;
+    }
+
+    .image {
+        background-image: url('/images/image-product-desktop.jpg');
+        background-size:cover;
+        width: 300px;
+        height: 450px;
+        border-radius: 10px 0 0 10px;
+    }
+
+    content {
+        width: 50%;
+    }
+
+    .container {
+        padding: 32px;
+        row-gap: 20px;
+    }
+
+    .product_description {
+        margin-bottom: 9px;
+        font-size: .813rem;
+    }
+
+    .price {
+        margin-bottom: 10px;
+    }
+
+}
